@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    
+    <center>
+
+        <h1 style="color: goldenrod; font-size: 4rem;">
+            Welcome to the home page
+        </h1>
+        <a href="" style="font-size: 2rem;">Create</a><br><br><br>
+
+        <table border="1" style="width: 700px; height: auto;">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Surname
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Grade
+                    </th>
+                    <th>
+                        Birthday
+                    </th>
+                </tr>
+            </thead>
+            {% for info in student %}
+            <tbody>
+                <tr>
+                    <td>
+                        {{info.name}}
+                    </td>
+                    <td>
+                        {{info.surname}}
+                    </td>
+                    <td>
+                        {{info.age}}
+                    </td>
+                    <td>
+                        {{info.grade}}
+                    </td>
+                    <td>
+                        {{info.birthday}}
+                    </td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
+    </center>
+
+</body>
+</html>
